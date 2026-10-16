@@ -62,7 +62,7 @@ All business content lives in `src/data/`. Most updates need no component change
 | `images.js` | All photography, in one place |
 | `routes.js` | Indexable routes, used for `sitemap.xml` |
 
-**Adding the CEO portrait:** set `company.ceo.portrait` to an image URL or a file in `public/`. The labelled placeholder is replaced automatically.
+**CEO portrait:** `company.ceo.portrait` points to `src/assets/brand/ceo-portrait.webp`, an optimized version of the supplied `public/ceo.jpg` with overlay remnants cropped from the top edge. To change it, replace that file or point the field at another image. If the field is set to `null`, a labelled placeholder appears instead.
 
 **Adding contact details:** set `company.phone`, `company.email` and `company.businessHours`. They appear in the footer and on the contact page as soon as they are set.
 
@@ -129,7 +129,7 @@ Any static host works. Deploy `dist/`. Because the site uses client-side routing
 
 ## Assets and content awaiting the company
 
-- **CEO portrait:** a labelled placeholder is shown. No stand-in photo is used.
+- **CEO portrait:** supplied and in use. A higher-resolution, professionally shot photo would look sharper on large screens.
 - **Logo:** the supplied `public/logo.jpg` is the source. The site uses a background-removed version (`src/assets/brand/logo.webp`), plus the globe emblem (`logo-mark.webp`) for the favicons and the loading screen. The logo is designed for dark backgrounds, so the header (including the scrolled state), mobile menu and footer are navy. A vector (SVG) logo from the designer would be ideal for print and very large sizes.
 - **Phone, email, business hours, social profiles:** all hidden until they are supplied.
 - **Production domain:** set `VITE_SITE_URL`.

@@ -38,7 +38,7 @@ export default function Leadership({ className, headingLevel = 'h2' }) {
         <Reveal className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[var(--radius-card)]">
             {company.ceo.portrait ? (
-              <SmartImage src={company.ceo.portrait} alt={`${company.ceo.name}, ${company.ceo.title}`} className="h-full w-full" />
+              <SmartImage src={company.ceo.portrait} alt={`Portrait of ${company.ceo.name}, ${company.ceo.title}`} width={784} sizes="(min-width:1024px) 40vw, 90vw" className="h-full w-full" imgClassName="object-[center_25%]" />
             ) : (
               <PortraitPlaceholder />
             )}

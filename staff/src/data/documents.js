@@ -1,0 +1,24 @@
+// FICTIONAL SAMPLE DATA — metadata only; no real files are bundled.
+export const documentTypes = ['Invoice', 'Quotation', 'Purchase Document', 'Shipping Document', 'Contract', 'Receipt', 'Customs or Trade Document', 'Other']
+export const documentStatuses = ['Verified', 'Pending Review', 'Draft', 'Requested']
+
+// Financial and commercial records are protected from staff edits/deletion.
+export const PROTECTED_TYPES = ['Invoice', 'Quotation', 'Purchase Document', 'Contract', 'Receipt']
+
+export const documents = (d) => [
+  { id: 'DC-301', reference: 'DOC-2026-301', name: 'Bill of lading — rice consignment', type: 'Shipping Document', orderId: 'OR-101', shipmentId: 'SH-201', documentDate: d(-11), recordedAt: d(-11), fileName: 'BL-COK-11872.pdf', fileSize: 412000, status: 'Verified', addedBy: 'EM-002', description: 'Original bill of lading scan.' },
+  { id: 'DC-302', reference: 'DOC-2026-302', name: 'Packing list — rice consignment', type: 'Shipping Document', orderId: 'OR-101', shipmentId: 'SH-201', documentDate: d(-12), recordedAt: d(-1), fileName: 'packing-list-cok-11872.xlsx', fileSize: 46000, status: 'Verified', addedBy: 'EM-001', description: '' },
+  { id: 'DC-303', reference: 'DOC-2026-303', name: 'Phytosanitary certificate (container 1)', type: 'Customs or Trade Document', orderId: 'OR-102', shipmentId: 'SH-202', documentDate: d(-19), recordedAt: d(-18), fileName: 'phyto-cert-c1.jpg', fileSize: 1240000, status: 'Verified', addedBy: 'EM-001', description: 'Container 2 certificate still pending.' },
+  { id: 'DC-304', reference: 'DOC-2026-304', name: 'Commercial invoice — coffee export', type: 'Invoice', orderId: 'OR-102', shipmentId: 'SH-203', documentDate: d(-40), recordedAt: d(-40), fileName: 'INV-2026-002.pdf', fileSize: 152000, status: 'Verified', addedBy: 'EM-ADM', description: '' },
+  { id: 'DC-305', reference: 'DOC-2026-305', name: 'Purchase order PO-0425 — rice', type: 'Purchase Document', orderId: 'OR-101', shipmentId: '', documentDate: d(-33), recordedAt: d(-33), fileName: 'PO-0425.pdf', fileSize: 98000, status: 'Verified', addedBy: 'EM-ADM', description: '' },
+  { id: 'DC-306', reference: 'DOC-2026-306', name: 'Quotation QT-2026-009 — hardware', type: 'Quotation', orderId: 'OR-105', shipmentId: '', documentDate: d(-40), recordedAt: d(-40), fileName: 'QT-2026-009.pdf', fileSize: 120000, status: 'Verified', addedBy: 'EM-ADM', description: '' },
+  { id: 'DC-307', reference: 'DOC-2026-307', name: 'Certificate of origin — rice', type: 'Customs or Trade Document', orderId: 'OR-101', shipmentId: 'SH-201', documentDate: '', recordedAt: d(-1), fileName: '', fileSize: null, status: 'Requested', addedBy: 'EM-ADM', description: 'Requested by the administrator. Register the received copy here.' },
+  { id: 'DC-308', reference: 'DOC-2026-308', name: 'Carrier delay notice', type: 'Other', orderId: 'OR-104', shipmentId: 'SH-204', documentDate: d(-7), recordedAt: d(-7), fileName: 'delay-notice-jea-55190.pdf', fileSize: 64000, status: 'Pending Review', addedBy: 'EM-001', description: 'Notice of missed transhipment connection.' },
+  { id: 'DC-309', reference: 'DOC-2026-309', name: 'Supply contract — steel rebar', type: 'Contract', orderId: 'OR-103', shipmentId: '', documentDate: d(-10), recordedAt: d(-9), fileName: 'contract-rebar.pdf', fileSize: 905000, status: 'Verified', addedBy: 'EM-ADM', description: '' },
+  { id: 'DC-310', reference: 'DOC-2026-310', name: 'Delivery receipt — Dubai consignment', type: 'Receipt', orderId: 'OR-106', shipmentId: 'SH-206', documentDate: d(-63), recordedAt: d(-61), fileName: 'delivery-receipt-dubai.pdf', fileSize: 71000, status: 'Verified', addedBy: 'EM-001', description: '' },
+  { id: 'DC-311', reference: 'DOC-2026-311', name: 'Dispatch checklist (draft)', type: 'Other', orderId: 'OR-102', shipmentId: 'SH-203', documentDate: d(-1), recordedAt: d(-1), fileName: '', fileSize: null, status: 'Draft', addedBy: 'EM-001', description: 'Working checklist for the Jebel Ali feeder.' },
+  { id: 'DC-314', reference: 'DOC-2026-314', name: 'Bill of lading — generators', type: 'Shipping Document', orderId: 'OR-104', shipmentId: 'SH-204', documentDate: d(-25), recordedAt: d(-24), fileName: 'BL-JEA-55190.pdf', fileSize: 380000, status: 'Verified', addedBy: 'EM-002', description: '' },
+  // Another employee's records — not visible to Ahmed.
+  { id: 'DC-312', reference: 'DOC-2026-312', name: 'Packaging specification — Sahel', type: 'Other', orderId: 'OR-107', shipmentId: 'SH-207', documentDate: d(-5), recordedAt: d(-5), fileName: 'packaging-spec.pdf', fileSize: 88000, status: 'Draft', addedBy: 'EM-002', description: '' },
+  { id: 'DC-313', reference: 'DOC-2026-313', name: 'Truck booking — Berbera', type: 'Shipping Document', orderId: 'OR-108', shipmentId: 'SH-208', documentDate: d(-2), recordedAt: d(-2), fileName: 'truck-booking.pdf', fileSize: 45000, status: 'Verified', addedBy: 'EM-002', description: '' },
+]

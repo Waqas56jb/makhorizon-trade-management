@@ -1,0 +1,12 @@
+// FICTIONAL SAMPLE DATA
+export const partnerTypes = ['Logistics Partner', 'Distributor', 'Supplier Partner', 'Buyer', 'Investor Inquiry', 'Other']
+export const partnerStatuses = ['Prospect', 'Contacted', 'Active', 'Inactive']
+
+export const partners = (d) => [
+  { id: 'PT-001', company: 'Corridor Logistics Partners', contact: 'Selam Bekele', email: 'selam@corridor-logistics.example', phone: '+251 91 555 7720', country: 'Ethiopia', type: 'Logistics Partner', website: 'corridor-logistics.example', status: 'Active', notes: 'Bonded trucking capacity on the Djibouti–Addis corridor.', createdAt: d(-90), opportunities: [{ id: 'OP-1', date: d(-30), title: 'Shared truck capacity for coffee season', note: 'Agreed to share weekly availability.' }] },
+  { id: 'PT-002', company: 'Lakeside Distribution Co.', contact: 'Peter Okello', email: 'peter@lakeside-dist.example', phone: '', country: 'Uganda', type: 'Distributor', website: '', status: 'Contacted', notes: 'Interested in packaging and solar products.', createdAt: d(-40), opportunities: [{ id: 'OP-1', date: d(-12), title: 'Solar lantern distribution in Kampala', note: 'Waiting for their volume estimate.' }] },
+  { id: 'PT-003', company: 'Al Noor Trading Partners', contact: 'Salim Al-Harthy', email: 'salim@alnoor-trading.example', phone: '+968 24 555 310', country: 'Oman', type: 'Supplier Partner', website: 'alnoor-trading.example', status: 'Prospect', notes: '', createdAt: d(-15), opportunities: [] },
+  { id: 'PT-004', company: 'Atlas Food Buyers Group', contact: 'Youssef Benali', email: 'y.benali@atlas-food.example', phone: '+212 522 555 118', country: 'Morocco', type: 'Buyer', website: '', status: 'Contacted', notes: 'Buyer group for pulses and spices.', createdAt: d(-55), opportunities: [{ id: 'OP-1', date: d(-20), title: 'Red lentils supply discussion', note: 'Requested samples and specifications.' }] },
+  { id: 'PT-005', company: 'Meridian Capital Advisors', contact: 'Rania Haddad', email: 'rania@meridian-advisors.example', phone: '', country: 'United Arab Emirates', type: 'Investor Inquiry', website: 'meridian-advisors.example', status: 'Prospect', notes: 'Exploratory inquiry received via website. No terms discussed.', createdAt: d(-8), opportunities: [] },
+  { id: 'PT-006', company: 'Coastline Freight Services', contact: 'Abdirahman Warsame', email: 'abdi@coastline-freight.example', phone: '+252 61 555 4401', country: 'Somalia', type: 'Logistics Partner', website: '', status: 'Inactive', notes: 'Coverage did not match current routes.', createdAt: d(-140), opportunities: [] },
+]

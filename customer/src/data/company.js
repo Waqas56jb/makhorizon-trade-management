@@ -1,3 +1,5 @@
+import ceoPortrait from '../assets/brand/ceo-portrait.webp'
+
 // Central company configuration. Only confirmed information is filled in.
 // Fields set to null are hidden throughout the site until real values are supplied.
 export const company = {
@@ -12,8 +14,8 @@ export const company = {
     name: 'Mako Mohamed Bouh',
     title: 'CEO, MAKHORIZON Logistics & Trade',
     location: 'Djibouti',
-    // Set to an image URL once the genuine, approved portrait is supplied.
-    portrait: null,
+    // Supplied by the company (source: public/ceo.jpg, overlay remnants cropped from the top edge).
+    portrait: ceoPortrait,
   },
 
   address: {

@@ -1,0 +1,57 @@
+// FICTIONAL SAMPLE DATA — demo records only, not company accounts.
+export const incomeCategories = ['Invoice Payment', 'Service Fee', 'Commission', 'Other Income']
+export const expenseCategories = ['Supplier Purchase', 'Freight & Logistics', 'Port & Handling', 'Office Rent', 'Utilities', 'Professional Services', 'Travel', 'Marketing', 'Other Expense']
+export const paymentMethods = ['Bank Transfer', 'Cash', 'Cheque', 'Mobile Money', 'Other']
+export const invoiceStatuses = ['Draft', 'Unpaid', 'Partially Paid', 'Paid', 'Overdue', 'Cancelled']
+
+export const invoices = (d) => [
+  { id: 'IN-001', number: 'INV-2026-001', clientId: 'CL-003', orderId: 'OR-001', issueDate: d(-60), dueDate: d(-30), currency: 'DJF', status: 'Unpaid', items: [{ description: 'Portland cement supply, 250 tonnes (ORD-2026-001)', quantity: 1, unitPrice: 4850000 }], taxRate: 0, additionalCharge: 0, notes: '' },
+  { id: 'IN-002', number: 'INV-2026-002', clientId: 'CL-002', orderId: 'OR-002', issueDate: d(-40), dueDate: d(-10), currency: 'USD', status: 'Unpaid', items: [{ description: 'Coffee export coordination, 3 containers', quantity: 3, unitPrice: 11800 }, { description: 'Document coordination', quantity: 1, unitPrice: 3100 }], taxRate: 0, additionalCharge: 0, notes: '' },
+  { id: 'IN-003', number: 'INV-2026-003', clientId: 'CL-001', orderId: 'OR-003', issueDate: d(-20), dueDate: d(10), currency: 'DJF', status: 'Unpaid', items: [{ description: 'Long-grain rice, 40 tonnes', quantity: 40, unitPrice: 76000 }, { description: 'Inland delivery', quantity: 1, unitPrice: 160000 }], taxRate: 0, additionalCharge: 0, notes: '' },
+  { id: 'IN-004', number: 'INV-2026-004', clientId: 'CL-005', orderId: 'OR-005', issueDate: d(-50), dueDate: d(-20), currency: 'DJF', status: 'Unpaid', items: [{ description: 'Dried pulses re-export, 18 tonnes', quantity: 1, unitPrice: 2650000 }], taxRate: 0, additionalCharge: 0, notes: '' },
+  { id: 'IN-005', number: 'INV-2026-005', clientId: 'CL-006', orderId: 'OR-006', issueDate: d(-35), dueDate: d(-5), currency: 'USD', status: 'Unpaid', items: [{ description: 'Generators and cables supply', quantity: 1, unitPrice: 21400 }], taxRate: 0, additionalCharge: 0, notes: 'Client asked for a payment extension.' },
+  { id: 'IN-006', number: 'INV-2026-006', clientId: 'CL-001', orderId: 'OR-009', issueDate: d(-94), dueDate: d(-64), currency: 'DJF', status: 'Unpaid', items: [{ description: 'Spices and lentils, 15 tonnes', quantity: 1, unitPrice: 2100000 }], taxRate: 0, additionalCharge: 0, notes: '' },
+  { id: 'IN-007', number: 'INV-2026-007', clientId: 'CL-002', orderId: 'OR-011', issueDate: d(-118), dueDate: d(-88), currency: 'USD', status: 'Unpaid', items: [{ description: 'Sesame export coordination', quantity: 1, unitPrice: 14200 }], taxRate: 0, additionalCharge: 0, notes: '' },
+  { id: 'IN-008', number: 'INV-2026-008', clientId: 'CL-008', orderId: 'OR-004', issueDate: d(-5), dueDate: d(25), currency: 'DJF', status: 'Unpaid', items: [{ description: 'Port coordination and inland delivery, 2 containers', quantity: 2, unitPrice: 690000 }], taxRate: 0, additionalCharge: 120000, notes: '' },
+  { id: 'IN-009', number: 'INV-2026-009', clientId: 'CL-003', orderId: 'OR-007', issueDate: d(-2), dueDate: d(13), currency: 'DJF', status: 'Draft', items: [{ description: 'Advance payment 30%, steel rebar order', quantity: 1, unitPrice: 2880000 }], taxRate: 0, additionalCharge: 0, notes: 'To be issued after supplier confirmation.' },
+  { id: 'IN-010', number: 'INV-2026-010', clientId: 'CL-007', orderId: 'OR-008', issueDate: d(-62), dueDate: d(-32), currency: 'DJF', status: 'Cancelled', items: [{ description: 'Packaged food goods', quantity: 1, unitPrice: 1180000 }], taxRate: 0, additionalCharge: 0, notes: 'Order cancelled.' },
+  { id: 'IN-011', number: 'INV-2026-011', clientId: 'CL-010', orderId: 'OR-012', issueDate: d(-1), dueDate: d(29), currency: 'DJF', status: 'Unpaid', items: [{ description: 'Packaging materials, 30 bales', quantity: 30, unitPrice: 31000 }], taxRate: 0, additionalCharge: 10000, notes: 'Additional charge: export documentation.' },
+]
+
+// Each payment creates a linked income record in seed.js.
+export const payments = (d) => [
+  { id: 'PY-001', invoiceId: 'IN-001', date: d(-55), amount: 2000000, method: 'Bank Transfer', reference: 'TRF-88120' },
+  { id: 'PY-002', invoiceId: 'IN-001', date: d(-28), amount: 2850000, method: 'Bank Transfer', reference: 'TRF-88544' },
+  { id: 'PY-003', invoiceId: 'IN-002', date: d(-35), amount: 15000, method: 'Bank Transfer', reference: 'SWIFT-2219' },
+  { id: 'PY-004', invoiceId: 'IN-003', date: d(-15), amount: 1000000, method: 'Bank Transfer', reference: 'TRF-89012' },
+  { id: 'PY-005', invoiceId: 'IN-004', date: d(-25), amount: 2650000, method: 'Cheque', reference: 'CHQ-004411' },
+  { id: 'PY-006', invoiceId: 'IN-006', date: d(-70), amount: 2100000, method: 'Bank Transfer', reference: 'TRF-86770' },
+  { id: 'PY-007', invoiceId: 'IN-007', date: d(-100), amount: 14200, method: 'Bank Transfer', reference: 'SWIFT-1984' },
+]
+
+export const records = (d) => [
+  { id: 'FR-001', date: d(-150), type: 'Income', category: 'Service Fee', description: 'Trade feasibility consultation', clientId: 'CL-004', supplierId: '', amount: 320000, currency: 'DJF', method: 'Bank Transfer', reference: 'SF-001', status: 'Received', notes: '' },
+  { id: 'FR-002', date: d(-125), type: 'Income', category: 'Commission', description: 'Introduction commission — sesame buyer', clientId: 'CL-002', supplierId: '', amount: 410000, currency: 'DJF', method: 'Bank Transfer', reference: 'CM-002', status: 'Received', notes: '' },
+  { id: 'FR-003', date: d(-85), type: 'Income', category: 'Service Fee', description: 'Document coordination service', clientId: 'CL-005', supplierId: '', amount: 185000, currency: 'DJF', method: 'Cash', reference: 'SF-003', status: 'Received', notes: '' },
+  { id: 'FR-004', date: d(-45), type: 'Income', category: 'Commission', description: 'Supplier introduction commission', clientId: 'CL-006', supplierId: '', amount: 260000, currency: 'DJF', method: 'Mobile Money', reference: 'CM-004', status: 'Received', notes: '' },
+  { id: 'FR-005', date: d(-3), type: 'Income', category: 'Service Fee', description: 'Port coordination advisory', clientId: 'CL-008', supplierId: '', amount: 150000, currency: 'DJF', method: 'Bank Transfer', reference: 'SF-005', status: 'Pending', notes: 'Expected this week.' },
+  { id: 'FR-006', date: d(-170), type: 'Expense', category: 'Office Rent', description: 'Office rent — Salam Tower', clientId: '', supplierId: '', amount: 180000, currency: 'DJF', method: 'Bank Transfer', reference: 'RENT-01', status: 'Paid', notes: '' },
+  { id: 'FR-007', date: d(-140), type: 'Expense', category: 'Office Rent', description: 'Office rent — Salam Tower', clientId: '', supplierId: '', amount: 180000, currency: 'DJF', method: 'Bank Transfer', reference: 'RENT-02', status: 'Paid', notes: '' },
+  { id: 'FR-008', date: d(-110), type: 'Expense', category: 'Office Rent', description: 'Office rent — Salam Tower', clientId: '', supplierId: '', amount: 180000, currency: 'DJF', method: 'Bank Transfer', reference: 'RENT-03', status: 'Paid', notes: '' },
+  { id: 'FR-009', date: d(-80), type: 'Expense', category: 'Office Rent', description: 'Office rent — Salam Tower', clientId: '', supplierId: '', amount: 180000, currency: 'DJF', method: 'Bank Transfer', reference: 'RENT-04', status: 'Paid', notes: '' },
+  { id: 'FR-010', date: d(-50), type: 'Expense', category: 'Office Rent', description: 'Office rent — Salam Tower', clientId: '', supplierId: '', amount: 180000, currency: 'DJF', method: 'Bank Transfer', reference: 'RENT-05', status: 'Paid', notes: '' },
+  { id: 'FR-011', date: d(-20), type: 'Expense', category: 'Office Rent', description: 'Office rent — Salam Tower', clientId: '', supplierId: '', amount: 180000, currency: 'DJF', method: 'Bank Transfer', reference: 'RENT-06', status: 'Paid', notes: '' },
+  { id: 'FR-012', date: d(-125), type: 'Expense', category: 'Supplier Purchase', description: 'Spices and lentils purchase', clientId: '', supplierId: 'SP-002', amount: 1700000, currency: 'DJF', method: 'Bank Transfer', reference: 'PO-0398', status: 'Paid', notes: '' },
+  { id: 'FR-013', date: d(-110), type: 'Expense', category: 'Supplier Purchase', description: 'Cement purchase, 250 tonnes', clientId: '', supplierId: 'SP-001', amount: 3950000, currency: 'DJF', method: 'Bank Transfer', reference: 'PO-0402', status: 'Paid', notes: '' },
+  { id: 'FR-014', date: d(-98), type: 'Expense', category: 'Port & Handling', description: 'Discharge and handling, cement vessel', clientId: '', supplierId: 'SP-008', amount: 240000, currency: 'DJF', method: 'Cash', reference: 'PH-117', status: 'Paid', notes: '' },
+  { id: 'FR-015', date: d(-60), type: 'Expense', category: 'Supplier Purchase', description: 'Woven PP bags purchase', clientId: '', supplierId: 'SP-003', amount: 3200, currency: 'USD', method: 'Bank Transfer', reference: 'PO-0412', status: 'Paid', notes: '' },
+  { id: 'FR-016', date: d(-50), type: 'Expense', category: 'Supplier Purchase', description: 'Generators and cables purchase', clientId: '', supplierId: 'SP-006', amount: 17800, currency: 'USD', method: 'Bank Transfer', reference: 'PO-0420', status: 'Paid', notes: '' },
+  { id: 'FR-017', date: d(-42), type: 'Expense', category: 'Freight & Logistics', description: 'Forwarding fees, Jebel Ali consignment', clientId: '', supplierId: 'SP-005', amount: 1450, currency: 'EUR', method: 'Bank Transfer', reference: 'FF-2231', status: 'Paid', notes: '' },
+  { id: 'FR-018', date: d(-32), type: 'Expense', category: 'Supplier Purchase', description: 'Long-grain rice purchase, 40 tonnes', clientId: '', supplierId: 'SP-002', amount: 2650000, currency: 'DJF', method: 'Bank Transfer', reference: 'PO-0425', status: 'Paid', notes: '' },
+  { id: 'FR-019', date: d(-20), type: 'Expense', category: 'Freight & Logistics', description: 'Road haulage Addis–Djibouti, 2 containers', clientId: '', supplierId: 'SP-004', amount: 420000, currency: 'DJF', method: 'Bank Transfer', reference: 'HL-5510', status: 'Paid', notes: '' },
+  { id: 'FR-020', date: d(-16), type: 'Expense', category: 'Utilities', description: 'Electricity and internet — office', clientId: '', supplierId: '', amount: 38000, currency: 'DJF', method: 'Mobile Money', reference: 'UT-09', status: 'Paid', notes: '' },
+  { id: 'FR-021', date: d(-9), type: 'Expense', category: 'Professional Services', description: 'Legal review of supply contract', clientId: '', supplierId: '', amount: 95000, currency: 'DJF', method: 'Bank Transfer', reference: 'PS-014', status: 'Paid', notes: '' },
+  { id: 'FR-022', date: d(-6), type: 'Expense', category: 'Freight & Logistics', description: 'Road haulage, rice delivery', clientId: '', supplierId: 'SP-004', amount: 380000, currency: 'DJF', method: 'Bank Transfer', reference: 'HL-5602', status: 'Pending', notes: 'Due on delivery confirmation.' },
+  { id: 'FR-023', date: d(-4), type: 'Expense', category: 'Supplier Purchase', description: 'Steel rebar advance (30%)', clientId: '', supplierId: 'SP-001', amount: 2160000, currency: 'DJF', method: 'Bank Transfer', reference: 'PO-0440', status: 'Pending', notes: '' },
+  { id: 'FR-024', date: d(-2), type: 'Expense', category: 'Marketing', description: 'Company website preparation', clientId: '', supplierId: '', amount: 120000, currency: 'DJF', method: 'Bank Transfer', reference: 'MK-003', status: 'Paid', notes: '' },
+]
