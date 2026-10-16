@@ -76,7 +76,7 @@ function Hero() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 2, ease: EASE }}
         >
-          <SmartImage image={images.portAerial} priority width={2200} className="h-full w-full" />
+          <SmartImage image={images.portAerial} priority className="h-full w-full" />
         </motion.div>
       </motion.div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-midnight/95 via-midnight/70 to-midnight/20" aria-hidden="true" />
@@ -174,10 +174,10 @@ function Introduction() {
       <div className="container-site grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
         <Reveal className="relative order-2 lg:order-1">
           <div className="relative ml-auto aspect-[4/5] w-[82%] overflow-hidden rounded-[var(--radius-card)]">
-            <SmartImage image={images.portCranes} width={900} sizes="(min-width:1024px) 40vw, 80vw" className="h-full w-full" />
+            <SmartImage image={images.portCranes} sizes="(min-width:1024px) 40vw, 80vw" className="h-full w-full" />
           </div>
           <div className="absolute bottom-[-2rem] left-0 aspect-square w-[46%] overflow-hidden rounded-[var(--radius-card)] border-[6px] border-ivory shadow-lift">
-            <SmartImage image={images.handshake} width={600} sizes="(min-width:1024px) 22vw, 45vw" className="h-full w-full" />
+            <SmartImage image={images.handshake} sizes="(min-width:1024px) 22vw, 45vw" className="h-full w-full" />
           </div>
           <div className="absolute left-[6%] top-8 max-w-[13rem] rounded-[var(--radius-card)] bg-navy p-5 text-white shadow-lift">
             <MapPin className="h-5 w-5 text-gold" aria-hidden="true" />
@@ -250,7 +250,7 @@ function WhyChoose() {
   return (
     <section className="on-dark section relative overflow-hidden bg-navy text-white">
       <div className="absolute inset-y-0 right-0 hidden w-[38%] lg:block">
-        <SmartImage image={images.containerYard} decorative width={1000} className="h-full w-full opacity-70" />
+        <SmartImage image={images.containerYard} decorative sizes="38vw" className="h-full w-full opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/60 to-navy/10" />
       </div>
       <div className="container-site relative">
@@ -360,7 +360,7 @@ function PartnershipOpportunities() {
           </Reveal>
         </div>
         <Reveal className="group relative min-h-[26rem] overflow-hidden rounded-[var(--radius-card)] lg:min-h-full">
-          <SmartImage image={images.meetingTable} width={1000} sizes="(min-width:1024px) 45vw, 100vw" className="media-zoom absolute inset-0 h-full w-full" />
+          <SmartImage image={images.meetingTable} sizes="(min-width:1024px) 45vw, 100vw" className="media-zoom absolute inset-0 h-full w-full" />
           <div className="absolute inset-0 bg-gradient-to-t from-midnight/90 via-midnight/20 to-transparent" />
           <div className="on-dark absolute inset-x-0 bottom-0 p-8 text-white sm:p-10">
             <p className="font-display text-3xl leading-tight sm:text-4xl">“Long-term relationships matter more than single transactions.”</p>
@@ -423,7 +423,7 @@ export default function Home() {
     <>
       <Seo
         description="MAKHORIZON Logistics & Trade is a Djibouti-based company helping businesses coordinate logistics, support import and export, connect with suppliers and buyers, and build international trade partnerships."
-        image={`${images.portAerial.src}?auto=format&fit=crop&w=1200&h=630&q=80`}
+        image={images.portAerial.og}
       />
       <Hero />
       <Introduction />

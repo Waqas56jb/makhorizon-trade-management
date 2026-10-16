@@ -48,10 +48,10 @@ export default function About() {
           </div>
           <Reveal className="grid grid-cols-2 gap-4">
             <div className="aspect-[3/4] overflow-hidden rounded-[var(--radius-card)]">
-              <SmartImage image={images.shipAtSea} width={700} sizes="(min-width:1024px) 22vw, 45vw" className="h-full w-full" />
+              <SmartImage image={images.shipAtSea} sizes="(min-width:1024px) 22vw, 45vw" className="h-full w-full" />
             </div>
             <div className="mt-12 aspect-[3/4] overflow-hidden rounded-[var(--radius-card)]">
-              <SmartImage image={images.meetingLaptops} width={700} sizes="(min-width:1024px) 22vw, 45vw" className="h-full w-full" />
+              <SmartImage image={images.meetingLaptops} sizes="(min-width:1024px) 22vw, 45vw" className="h-full w-full" />
             </div>
           </Reveal>
         </div>
@@ -148,7 +148,7 @@ export default function About() {
       <section className="section overflow-hidden" aria-labelledby="approach-heading">
         <div className="container-site grid items-center gap-14 lg:grid-cols-2 lg:gap-24">
           <Reveal className="relative aspect-[4/5] overflow-hidden rounded-[var(--radius-card)] sm:aspect-[4/3] lg:aspect-[4/5]">
-            <SmartImage image={images.signing} width={1000} sizes="(min-width:1024px) 45vw, 100vw" className="h-full w-full" />
+            <SmartImage image={images.signing} sizes="(min-width:1024px) 45vw, 100vw" className="h-full w-full" />
           </Reveal>
           <div>
             <SectionHeading eyebrow="Our approach" title={<span id="approach-heading">How we approach international trade.</span>} />
@@ -231,7 +231,7 @@ export default function About() {
             </Reveal>
           </div>
           <Reveal className="aspect-square overflow-hidden rounded-[var(--radius-card)]">
-            <SmartImage image={images.handshake} width={900} sizes="(min-width:1024px) 40vw, 100vw" className="h-full w-full" />
+            <SmartImage image={images.handshake} sizes="(min-width:1024px) 40vw, 100vw" className="h-full w-full" />
           </Reveal>
         </div>
       </section>

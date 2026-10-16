@@ -19,7 +19,7 @@ export default function NotFound() {
     <>
       <Seo title="Page not found" description="The page you are looking for could not be found." noindex />
       <section className="on-dark relative isolate flex min-h-[100svh] items-center overflow-hidden bg-midnight text-white">
-        <SmartImage image={images.shipAtSea} decorative priority width={1920} className="absolute inset-0 -z-10 h-full w-full opacity-35" />
+        <SmartImage image={images.shipAtSea} decorative priority className="absolute inset-0 -z-10 h-full w-full opacity-35" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-midnight via-midnight/90 to-midnight/50" aria-hidden="true" />
         <div className="container-site pb-20 pt-[calc(var(--header-h)+5rem)]">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE }} className="max-w-2xl">

@@ -15,7 +15,7 @@ export function ServiceImageCard({ service, index, className }) {
       )}
     >
       <div className="media-zoom relative aspect-[4/3] overflow-hidden">
-        <SmartImage image={service.image} width={640} sizes="(min-width:1280px) 25vw, (min-width:640px) 50vw, 100vw" className="h-full w-full" />
+        <SmartImage image={service.image} sizes="(min-width:1280px) 25vw, (min-width:640px) 50vw, 100vw" className="h-full w-full" />
         <div className="absolute inset-0 bg-gradient-to-t from-midnight/60 via-transparent to-midnight/35" />
         {index !== undefined && (
           <span className="absolute left-5 top-4 font-display text-3xl text-white/90">{String(index + 1).padStart(2, '0')}</span>

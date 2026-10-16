@@ -75,7 +75,7 @@ export default function ServiceDetail() {
 
   return (
     <>
-      <Seo title={service.title} description={service.summary} image={`${service.heroImage.src}?auto=format&fit=crop&w=1200&h=630&q=80`} />
+      <Seo title={service.title} description={service.summary} image={service.heroImage.og} />
       <PageHero
         eyebrow={service.title}
         title={service.headline}
@@ -127,7 +127,7 @@ export default function ServiceDetail() {
       <section className="section bg-white" aria-labelledby="benefit-heading">
         <div className="container-site grid items-center gap-14 lg:grid-cols-2 lg:gap-24">
           <Reveal className="media-zoom relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card)]">
-            <SmartImage image={service.image} width={1000} sizes="(min-width:1024px) 45vw, 100vw" className="h-full w-full" />
+            <SmartImage image={service.image} sizes="(min-width:1024px) 45vw, 100vw" className="h-full w-full" />
           </Reveal>
           <div>
             <SectionHeading eyebrow="Who may benefit" title={<span id="benefit-heading">Who this is designed for.</span>} />

@@ -70,7 +70,7 @@ export default function Partnerships() {
                   className="group grid scroll-mt-32 overflow-hidden rounded-[var(--radius-card)] border border-line bg-white lg:grid-cols-[0.42fr_0.58fr]"
                 >
                   <div className={cn('media-zoom relative aspect-[16/9] overflow-hidden lg:aspect-auto', i % 2 === 1 && 'lg:order-2')}>
-                    <SmartImage image={p.image} width={900} sizes="(min-width:1024px) 40vw, 100vw" className="h-full min-h-full w-full" />
+                    <SmartImage image={p.image} sizes="(min-width:1024px) 40vw, 100vw" className="h-full min-h-full w-full" />
                   </div>
                   <div className="flex flex-col justify-center p-8 lg:p-12">
                     <div className="flex items-center gap-4">
@@ -125,7 +125,7 @@ export default function Partnerships() {
               intro="Tell us who you are and what kind of collaboration you have in mind. Clear, specific proposals help the team respond meaningfully."
             />
             <Reveal className="relative mt-10 hidden aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] lg:block">
-              <SmartImage image={images.meetingTable} width={800} sizes="35vw" className="h-full w-full" />
+              <SmartImage image={images.meetingTable} sizes="35vw" className="h-full w-full" />
             </Reveal>
           </div>
           <Reveal className="rounded-[var(--radius-card)] border border-line bg-white p-6 shadow-card sm:p-10">

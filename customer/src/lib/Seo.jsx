@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { company, IS_PLACEHOLDER_DOMAIN, SITE_URL } from '../data/company'
+import { images } from '../data/images'
 
-const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?auto=format&fit=crop&w=1200&h=630&q=80'
+const DEFAULT_IMAGE = images.portAerial.og
 
 function setMeta(attr, key, content) {
   let el = document.head.querySelector(`meta[${attr}="${key}"]`)

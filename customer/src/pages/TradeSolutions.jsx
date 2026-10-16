@@ -103,7 +103,7 @@ export default function TradeSolutions() {
                   )}
                 >
                   <div className="media-zoom relative aspect-[16/10] overflow-hidden sm:aspect-auto md:aspect-[16/10] xl:aspect-auto">
-                    <SmartImage image={s.image} width={700} sizes="(min-width:1280px) 22vw, (min-width:768px) 45vw, 100vw" className="h-full min-h-full w-full" />
+                    <SmartImage image={s.image} sizes="(min-width:1280px) 22vw, (min-width:768px) 45vw, 100vw" className="h-full min-h-full w-full" />
                     <span className="absolute left-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/95 text-navy">
                       <Icon className="h-5 w-5" aria-hidden="true" />
                     </span>
@@ -130,7 +130,7 @@ export default function TradeSolutions() {
 
       {/* Illustrated workflow */}
       <section className="on-dark section relative overflow-hidden bg-midnight text-white" aria-labelledby="workflow-heading">
-        <SmartImage image={images.containersNight} decorative width={1800} className="absolute inset-0 h-full w-full opacity-20" />
+        <SmartImage image={images.containersNight} decorative className="absolute inset-0 h-full w-full opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-b from-midnight via-midnight/85 to-midnight" aria-hidden="true" />
         <div className="container-site relative">
           <Reveal className="mx-auto max-w-3xl text-center">

@@ -16,7 +16,7 @@ export default function CTASection({
     <section className={className}>
       <div className="container-site">
         <Reveal className="on-dark relative isolate overflow-hidden rounded-[var(--radius-card)] bg-midnight px-6 py-16 text-white sm:px-12 lg:px-20 lg:py-24">
-          <SmartImage image={image} decorative width={1600} className="absolute inset-0 -z-10 h-full w-full opacity-45" />
+          <SmartImage image={image} decorative className="absolute inset-0 -z-10 h-full w-full opacity-45" />
           <div className="absolute inset-0 -z-10 bg-gradient-to-r from-midnight via-midnight/90 to-midnight/40" aria-hidden="true" />
           <svg className="absolute -right-24 -top-24 -z-10 h-96 w-96 text-gold/20" viewBox="0 0 200 200" fill="none" aria-hidden="true">
             <circle cx="100" cy="100" r="98" stroke="currentColor" />

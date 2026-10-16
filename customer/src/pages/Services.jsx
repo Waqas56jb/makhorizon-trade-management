@@ -33,7 +33,7 @@ function ServiceRow({ service, index }) {
         aria-hidden="true"
         className={cn('group media-zoom relative block aspect-[16/10] overflow-hidden rounded-[var(--radius-card)]', reversed && 'lg:order-2')}
       >
-        <SmartImage image={service.image} width={1000} sizes="(min-width:1024px) 45vw, 100vw" className="h-full w-full" />
+        <SmartImage image={service.image} sizes="(min-width:1024px) 45vw, 100vw" className="h-full w-full" />
         <span className="absolute left-5 top-5 rounded-full bg-white/95 px-3 py-1 font-display text-lg text-navy">
           {String(index + 1).padStart(2, '0')}
         </span>

@@ -15,7 +15,7 @@ export default function PageHero({ eyebrow, title, intro, image, breadcrumbs, ch
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.6, ease: EASE }}
         >
-          <SmartImage image={image} priority decorative width={1920} className="h-full w-full" />
+          <SmartImage image={image} priority decorative className="h-full w-full" />
         </motion.div>
       )}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-midnight via-midnight/85 to-midnight/35" aria-hidden="true" />

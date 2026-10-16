@@ -114,7 +114,7 @@ function DesktopDropdown({ item }) {
                 ))}
               </ul>
               <Link to={item.to} className="group relative block min-h-56 overflow-hidden">
-                <SmartImage image={images.portCranes} decorative width={480} sizes="240px" className="absolute inset-0 media-zoom" />
+                <SmartImage image={images.portCranes} decorative sizes="240px" className="absolute inset-0 media-zoom" />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight/90 via-midnight/30 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5 text-white">
                   <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-gold">Overview</p>

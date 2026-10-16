@@ -1,10 +1,10 @@
 import { useId, useState } from 'react'
 import { ImageOff } from 'lucide-react'
-import { cn, unsplashSources } from '../../lib/utils'
+import { cn } from '../../lib/utils'
 
 /**
- * Responsive image with lazy loading, srcset generation for Unsplash URLs, a
- * soft fade-in, and a branded fallback panel if the remote image fails.
+ * Responsive, self-hosted image with lazy loading, the image's srcSet, a soft
+ * fade-in, and a branded fallback panel if the file cannot be loaded.
  */
 export default function SmartImage({
   image,
@@ -14,15 +14,13 @@ export default function SmartImage({
   imgClassName,
   priority = false,
   sizes = '100vw',
-  width = 1200,
-  ratio,
   decorative = false,
 }) {
   const src = srcProp ?? image?.src
+  const srcSet = srcProp ? undefined : image?.srcSet
   const alt = decorative ? '' : (altProp ?? image?.alt ?? '')
   const [status, setStatus] = useState('loading')
   const patternId = `fallback-grid-${useId().replace(/:/g, '')}`
-  const sources = unsplashSources(src, { width, ratio })
   // Only default to `relative` when the caller hasn't positioned the wrapper itself.
   const positioned = /(^|\s)(absolute|fixed)(\s|$)/.test(className ?? '')
 
@@ -46,8 +44,8 @@ export default function SmartImage({
         </div>
       ) : (
         <img
-          src={sources.src}
-          srcSet={sources.srcSet}
+          src={src}
+          srcSet={srcSet}
           sizes={sizes}
           alt={alt}
           loading={priority ? 'eager' : 'lazy'}

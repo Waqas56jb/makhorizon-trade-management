@@ -59,7 +59,7 @@ All business content lives in `src/data/`. Most updates need no component change
 | `partnerships.js` | Partner audiences, partnership types and process |
 | `tradeSolutions.js` | Trade solution areas and workflow |
 | `navigation.js` | Header and footer menus |
-| `images.js` | All photography, in one place |
+| `images.js` | All photography, in one place. Files are self-hosted in `public/images/` as WebP at 640, 1024 and 1600px. |
 | `routes.js` | Indexable routes, used for `sitemap.xml` |
 
 **CEO portrait:** `company.ceo.portrait` points to `src/assets/brand/ceo-portrait.webp`, an optimized version of the supplied `public/ceo.jpg` with overlay remnants cropped from the top edge. To change it, replace that file or point the field at another image. If the field is set to `null`, a labelled placeholder appears instead.
@@ -133,5 +133,5 @@ Any static host works. Deploy `dist/`. Because the site uses client-side routing
 - **Logo:** the supplied `public/logo.jpg` is the source. The site uses a background-removed version (`src/assets/brand/logo.webp`), plus the globe emblem (`logo-mark.webp`) for the favicons and the loading screen. The logo is designed for dark backgrounds, so the header (including the scrolled state), mobile menu and footer are navy. A vector (SVG) logo from the designer would be ideal for print and very large sizes.
 - **Phone, email, business hours, social profiles:** all hidden until they are supplied.
 - **Production domain:** set `VITE_SITE_URL`.
-- **Djibouti photography:** current images are generic logistics photos from Unsplash (free licence). Genuine Djibouti or company photos are recommended.
+- **Djibouti photography:** current images are generic logistics photos from Unsplash (free licence), downloaded and served from the site itself so they load even where Unsplash is slow or blocked. Genuine Djibouti or company photos are recommended. To replace one, add `<key>-640.webp`, `<key>-1024.webp` and `<key>-1600.webp` to `public/images/`.
 - **Copy marked as draft:** the CEO message, the mission and vision, and the Privacy Policy and Terms of Use need company approval, and legal review for the two policy documents.
